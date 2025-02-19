@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/practica_figma/screens/home_screen.dart';
+import 'package:flutter_application_1/practica_figma/screens/place_screen.dart';
+import 'package:flutter_application_1/practica_figma/screens/splash_screen_figma.dart';
 import 'package:flutter_application_1/screens/dashboad_screen.dart';
 import 'package:flutter_application_1/screens/list_students_screen.dart';
 import 'package:flutter_application_1/screens/splash_screen.dart';
@@ -19,6 +22,9 @@ class MyApp extends StatelessWidget {
             routes: {
               "/list": (context) => ListStudentsScreen(),
               "/dash": (context) => DashboadScreen(),
+              "/home": (context) => HomeScreen(),
+              "/Place": (context) => PlaceScreen(),
+              "/splash":(context) => SplashScreenFigma(),
             },
             title: 'Material App',
             home: SplashScreen(),

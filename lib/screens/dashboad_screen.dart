@@ -32,7 +32,11 @@ class DashboadScreen extends StatelessWidget {
           leading: Icon(Icons.design_services),
           title: Text("Practica Figma"),
           subtitle: Text("Fronted App"),
-          trailing: Icon(Icons.chevron_right),
+          trailing: GestureDetector(
+              onDoubleTap: () {
+                Navigator.pushNamed(context, "/splash");
+              },
+              child: Icon(Icons.chevron_right)),
         )
       ])),
       //endDrawer: Drawer(),

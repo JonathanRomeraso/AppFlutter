@@ -32,7 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
           image: DecorationImage(
         opacity: 0.3,
         fit: BoxFit.cover,
-        image: AssetImage("fondo.jpg"),
+        image: AssetImage("assets/fondo.jpg"),
       )),
       child: Stack(
         alignment: Alignment.center,
@@ -49,8 +49,8 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
           Positioned(
             top: 270,
-            left: 90,
-            child: Lottie.asset("tecnm.json", height: 250),
+            left: 2,
+            child: Lottie.asset("assets/tecnm.json", height: 250),
           ),
           Positioned(
               bottom: 50,
@@ -91,7 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           )),
                       */
                       child: Image.asset(
-                        "buttonSignUp.png",
+                        "assets/buttonSignUp.png",
                         height: 80,
                       ),
                     )

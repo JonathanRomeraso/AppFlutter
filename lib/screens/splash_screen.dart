@@ -11,11 +11,11 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: FlutterSplashScreen(
-        duration: Duration(milliseconds: 4000),
+        duration: Duration(milliseconds: 6000),
         nextScreen: LoginScreen(),
         backgroundColor: Colors.white,
         splashScreenBody: Center(
-          child: Lottie.asset("tecnm.json"),
+          child: Lottie.asset("assets/tecnm.json"),
         ),
       ),
     );
