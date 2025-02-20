@@ -1,6 +1,7 @@
 import 'package:dark_light_button/dark_light_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/utils/global_values.dart';
+import 'package:flutter_application_1/utils/theme_settings.dart';
 
 class DashboadScreen extends StatelessWidget {
   const DashboadScreen({super.key});
@@ -9,17 +10,21 @@ class DashboadScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Bienvenido"),
-        actions: [],
+        title: Text("Bienvenido",),
+        actions: [
+          DarlightButton(
+              type: Darlights.DarlightFour,
+              options: DarlightFourOption(),
+              onChange: (value) {
+                if (value == ThemeMode.light) {
+                  GlobalValues.themeApp.value = ThemeSettings.lightTheme();
+                } else {
+                  GlobalValues.themeApp.value = ThemeSettings.darkTheme();
+                }
+              }),
+        ],
       ),
-      /*body:
-       DarlightButton(
-          type: Darlights.DarlightFour,
-          options: DarlightFourOption(),
-          onChange: (value) {
-            GlobalValues.themeApp = ThemeMode.dark;
-          }),
-          */
+
       drawer: Drawer(
           child: ListView(children: [
         UserAccountsDrawerHeader(

@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         valueListenable: GlobalValues.themeApp,
         builder: (context, value, child) {
           return MaterialApp(
-            themeMode: value,
+            theme: value,
             routes: {
               "/list": (context) => ListStudentsScreen(),
               "/dash": (context) => DashboadScreen(),
